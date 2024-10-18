@@ -1,0 +1,71 @@
+@import './style/_mixins.scss';
+
+.andropple-lab-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid $border-light-color;
+  border-radius: 10px;
+  background-color: $white-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+
+  .id {
+    font-size: 14px;
+    color: $placeholder-color;
+  }
+
+  .company-logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+
+  .company-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+
+    .stars {
+      color: #f8ce0b;
+      margin-right: 5px;
+    }
+
+    .rating-value {
+      font-size: 16px;
+      font-weight: bold;
+      color: $black-light;
+      margin-right: 20px;
+    }
+  }
+
+  .reviews {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .positive {
+      color: $success-color;
+    }
+
+    .negative {
+      color: $danger-color;
+    }
+  }
+
+  .recommended-by, .not-recommended-by {
+    font-size: 14px;
+    margin-right: 20px;
+  }
+
+  .more-options {
+    cursor: pointer;
+    font-size: 18px;
+  }
+}

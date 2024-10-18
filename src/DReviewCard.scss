@@ -1,0 +1,52 @@
+@import './style/_mixins.scss';
+
+.dreview-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  font-family: 'Arial', sans-serif;
+
+  .title-rating {
+    h3 {
+      margin: 0;
+      @include fontStyle(1rem, $black-light, normal, 1.5);
+    }
+  }
+
+  .stars-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+
+    .stars {
+      font-size: 0.9rem;
+      color: #ff9800;
+    }
+
+    .overall-rating {
+      display: flex;
+      align-items: center;
+      font-size: 0.7rem;
+
+      .rating-value {
+        background-color: $primary-color;
+        color: $white-color;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid $border-light-color;
+    margin-top: 8px;
+  }
+
+  .rate {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+}

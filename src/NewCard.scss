@@ -1,0 +1,89 @@
+@import './style/_mixins.scss';
+
+.new-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  gap: 5px;
+  padding: 20px;
+  background-color: $regiter-bg;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  font-family: 'Arial', sans-serif;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 50px;
+
+  .company-logo {
+    grid-row: 1 / span 3;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .details {
+    h3 {
+      margin: 0;
+      @include fontStyle(1rem, $black-light, bold, 1.5);
+    }
+
+    .ratings {
+      margin: 8px 0;
+      color: #ff9800;
+      font-size: 1rem;
+    }
+
+    .rating-block {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .rating-value {
+        background-color: $primary-color;
+        color: $white-color;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .actions {
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    .reaction {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .icon {
+        font-size: 1rem;
+      }
+
+      .thumbs-up {
+        color: $success-color;
+        margin-left: 7px;
+        font-size: 20px;
+      }
+
+      .thumbs-down {
+        color: $danger-color;
+        margin-left: 1px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .location {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}

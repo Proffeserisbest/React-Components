@@ -1,0 +1,23 @@
+.newgg-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px; /* Adjust as needed */
+    text-align: center; /* Center content */
+  }
+  
+  .logo img {
+    width: 100px; /* Adjust as needed */
+  }
+  
+  .brand-info h2 {
+    margin-top: 0; /* Remove default margin */
+  }
+  
+  .ratings {
+    margin-bottom: 10px;
+  }
+  
+  .counters {
+    display: flex;
+    justify-content: space-around;
+  }

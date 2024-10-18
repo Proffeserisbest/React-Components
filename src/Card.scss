@@ -1,0 +1,98 @@
+@import './style/_mixins.scss';
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: $regiter-bg;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+
+  .company-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+  }
+
+  .details {
+    flex: 1;
+    margin-left: 20px;
+
+    h3 {
+      margin: 0;
+      @include fontStyle(1.2rem, $black-light, bold, 1.5);
+    }
+
+    .ratings {
+      margin: 5px 0;
+      font-size: 1rem;
+      color: #ff9800;
+    }
+
+    .website {
+      color: $sky-color;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+  }
+
+  .location-ratings {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    p {
+      margin: 0 20px 0 0;
+      @include fontStyle(0.9rem, $black-light, normal, 1.5);
+    }
+
+    .overall-ratings {
+      display: flex;
+      align-items: center;
+
+      .rating-value {
+        background-color: $primary-color;
+        color: $white-color;
+        padding: 5px 10px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        margin-top: 20px;
+
+        span {
+          font-size: 0.8rem;
+        }
+
+        p {
+          margin: 0;
+          font-size: 0.7rem;
+        }
+      }
+
+      .thumbs {
+        display: flex;
+        align-items: center;
+        gap: 55px;
+
+        .icon {
+          font-size: 1rem;
+        }
+
+        .thumbs-up {
+          color: $success-color;
+        }
+
+        .thumbs-down {
+          color: $danger-color;
+        }
+      }
+    }
+  }
+}

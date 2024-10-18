@@ -1,0 +1,63 @@
+@import './style/_mixins.scss';
+
+.review-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: $white-color;
+  //border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid $border-light-color;
+  font-family: 'Arial', sans-serif;
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .details {
+    flex: 1;
+    margin-left: 20px;
+
+    h3 {
+      margin: 0;
+      @include fontStyle(1.2rem, $black-light, bold, 1.5);
+    }
+
+    p {
+      margin: 4px 0;
+      @include fontStyle(0.9rem, $placeholder-color, normal, 1.5);
+    }
+
+    .stars {
+      font-size: 1rem;
+      color: #ff9800;
+    }
+  }
+
+  .location {
+    text-align: right;
+    margin-bottom: 10px;
+
+    p {
+      margin: 0;
+      margin-bottom: 15px;
+      @include fontStyle(0.9rem, $black, normal, 1.5);
+    }
+
+    .rating {
+      margin-top: 8px;
+      background-color: $primary-color;
+      color: $white-color;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+  }
+}

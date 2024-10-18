@@ -1,0 +1,73 @@
+.slcandidate-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    //border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    font-family: 'Arial', sans-serif;
+  
+    .profile-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  
+    .details {
+      flex: 1;
+      margin-left: 20px;
+  
+      .name {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+      }
+  
+      .role {
+        margin: 3px 0;
+        font-size: 0.8rem;
+        color: #777;
+      }
+    }
+  
+    .location-remove {
+      text-align: right;
+      
+      .location {
+        margin: 0;
+        margin-bottom: 8px;
+        font-size: 0.8rem;
+        color: #333;
+      }
+  
+      .remove-btn {
+        margin-top: 5px;
+        background-color: #f5f5f5;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #999;
+  
+        .remove-icon {
+          font-size: 0.8rem;
+          color: #666;
+        }
+  
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+    }
+  }
+  

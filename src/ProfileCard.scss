@@ -1,0 +1,53 @@
+@import './style/_mixins.scss';
+
+.profile-card {
+  width: 400px;
+  padding: 40px;
+  border: 1px solid $border-light-color;
+  border-radius: 12px;
+  text-align: center;
+  background-color: $white-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid $primary-color;
+    margin: 0 auto 10px auto;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin: 10px 0;
+    @include fontStyle(1.2rem, $black-light, bold, 1.5);
+  }
+
+  .subtitle {
+    @include fontStyle(0.9rem, $placeholder-color, normal, 1.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .separator {
+      margin: 0 15px;
+    }
+  }
+
+  .tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+
+    .tag {
+      padding: 5px 15px;
+      border: 1px solid $primary-color;
+      border-radius: 15px;
+      color: $primary-color;
+      @include fontStyle(0.9rem, $primary-color, normal, 1.5);
+    }
+  }
+}

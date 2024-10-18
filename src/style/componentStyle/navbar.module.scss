@@ -1,0 +1,31 @@
+// mixin styles
+@import "../mixins";
+
+.navbar {
+    display: flex;
+    align-items: center;             
+    justify-content: space-between;  
+    padding-left: 2rem;              
+    padding-right: 2rem;
+    height: 80px;                    
+    border: 1px solid $border-color;       
+  }
+  
+  .navbar-image {
+    width: 209px;                    
+    height: 40px;                    
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;             
+    gap: 1.75rem;  
+    @extend .linking;
+  }
+  
+  .navbar-button {  
+    @extend .buttonVarient , .buttonVarient--primary;
+    padding: 0.5625rem 0.9875rem;     
+    font-size: 0.75rem;
+  }
+  

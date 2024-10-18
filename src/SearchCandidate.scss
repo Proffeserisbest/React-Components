@@ -1,0 +1,118 @@
+@import './style/_mixins.scss';
+
+.search-candidate {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+  color: $black-light;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary-color;
+    padding: 10px;
+    color: $white-color;
+
+    h2 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: normal;
+      opacity: 0.5;
+
+      &.highlighted {
+        opacity: 1;
+      }
+    }
+  }
+
+  .candidate-count {
+    margin: 15px 0;
+    font-size: 0.9rem;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: $border-light-color;
+    border-radius: 4px;
+
+    .search-input {
+      border: none;
+      padding: 5px;
+      width: 100%;
+      outline: none;
+      font-size: 0.9rem;
+      background-color: transparent;
+    }
+  }
+
+  .candidate-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: $white-color;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid $border-light-color;
+
+    .profile-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .details {
+      flex: 1;
+      margin-left: 20px;
+
+      .name {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      .role {
+        margin: 3px 0;
+        font-size: 0.8rem;
+        color: $placeholder-color;
+      }
+    }
+
+    .location-remove {
+      text-align: right;
+
+      .location {
+        margin: 0;
+        font-size: 0.8rem;
+        color: $light;
+      }
+
+      .remove-btn {
+        margin-top: 5px;
+        background-color: $border-light-color;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: $light;
+
+        .remove-icon {
+          font-size: 1rem;
+          color: $placeholder-color;
+        }
+
+        &:hover {
+          background-color: $border-light-color;
+        }
+      }
+    }
+  }
+}

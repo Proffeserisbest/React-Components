@@ -1,0 +1,71 @@
+@import './style/_mixins.scss';
+
+.political-card {
+  position: relative;
+  width: 300px;
+  padding: 16px;
+  border: 1px solid $border-light-color;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center horizontally
+  justify-content: center; // Center vertically
+  margin-top: 50px;
+  margin-left: 50px;
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  h3 {
+    margin: 10px 0;
+    @include fontStyle(1.2rem, $black-light, bold, 1.5);
+  }
+
+  .location {
+    color: $placeholder-color;
+    margin-bottom: 16px;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    span {
+      @include fontStyle(0.9rem, $black, normal, 1.5);
+
+      strong {
+        color: $primary-color;
+      }
+    }
+
+    .divider {
+      flex-grow: 1;
+      border: none;
+      border-top: 1px solid $border-light-color;
+      margin: 0 10px;
+    }
+  }
+
+  .notification {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    color: $white-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+}

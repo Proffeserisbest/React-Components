@@ -1,0 +1,43 @@
+@import './style/_mixins.scss';
+
+.linecandi-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: $white-color;
+  //border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  border-left: 5px solid $primary-color;
+
+  .profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  .details {
+    flex: 1;
+
+    .name {
+      margin: 0;
+      @include fontStyle(1rem, $black-light, bold, 1.5);
+    }
+
+    .role {
+      margin: 3px 0;
+      @include fontStyle(0.8rem, $placeholder-color, normal, 1.5);
+    }
+  }
+
+  .location {
+    margin: 0;
+    @include fontStyle(0.8rem, $light, normal, 1.5);
+    text-align: right;
+  }
+}

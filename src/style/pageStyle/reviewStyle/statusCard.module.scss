@@ -1,0 +1,285 @@
+// mixin file import  style
+@import "../../mixins";
+
+%header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+%sub-herader {
+  width: 100%;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-ligher-color;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+%title {
+  width: 100%;
+  @extend .h6;
+  margin-left: 0.8rem;
+  color: $secondary-color;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #23babc;
+  }
+}
+
+%status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.status-card {
+  @extend %centerSection;
+  margin-bottom: 1rem;
+
+  .header {
+    @extend %header;
+
+    .sub-header {
+      @extend %sub-herader;
+
+      .title {
+        @extend %title;
+      }
+    }
+  }
+
+  .description {
+    @extend %status;
+    color: $light;
+
+    label {
+      margin-right: 3rem;
+    }
+
+    input {
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+
+    .textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid $border-ligher-color;
+      border-radius: 4px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+  }
+
+  .salarydropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .dropdown-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dropdown-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 0.5rem;
+
+      .dropdown-icon {
+        position: absolute;
+        left: 10px;
+        top: 7px;
+        pointer-events: none;
+        margin-right: 5px;
+      }
+
+      .dropdown {
+        padding-left: 50px; // Space for the icon
+        width: 100%;
+        cursor: pointer; // Change cursor to pointer
+        appearance: none; // Remove default dropdown arrow
+        border: 0.3px solid $border-ligher-color;
+        border-radius: 4px;
+        font-size: 1rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+
+        option {
+          // padding: 1rem;
+        }
+      }
+
+      .dropdown-arrow {
+        position: absolute;
+        right: 25px; // Position arrow at the end
+        top: 39%; // Center vertically
+        transform: translateY(-50%); // Center adjustment
+        transition: transform 0.3s ease; // Smooth transition for rotation
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+
+        // Initial state (downward)
+        transform: rotate(0deg);
+
+        &.rotated {
+          // Rotate arrow when dropdown is open
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .benefits {
+    .dropdown {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .leaves {
+    .dropdown {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .dropdown {
+    display: flex;
+    gap: 2rem;
+
+    .dropdown-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dropdown-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 0.5rem;
+
+      .dropdown-icon {
+        position: absolute;
+        left: 10px;
+        top: 7px;
+        pointer-events: none;
+        margin-right: 5px;
+      }
+
+      .dropdown {
+        padding-left: 50px; // Space for the icon
+        width: 100%;
+        cursor: pointer; // Change cursor to pointer
+        appearance: none; // Remove default dropdown arrow
+        border: 0.3px solid $border-ligher-color;
+        border-radius: 4px;
+        font-size: 1rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+
+        option {
+          // padding: 1rem;
+        }
+      }
+
+      .dropdown-arrow {
+        position: absolute;
+        right: 25px; // Position arrow at the end
+        top: 39%; // Center vertically
+        transform: translateY(-50%); // Center adjustment
+        transition: transform 0.3s ease; // Smooth transition for rotation
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+
+        // Initial state (downward)
+        transform: rotate(0deg);
+
+        &.rotated {
+          // Rotate arrow when dropdown is open
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+
+  .thoughts {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem;
+
+    .radios {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+
+      label {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+      }
+    }
+  }
+
+  .rating {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .rating-item {
+    display: flex;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    flex-direction: column;
+
+    .rating-label {
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .rating-content {
+      display: flex;
+      align-items: center;
+
+      .stars {
+        display: flex;
+
+
+        span {
+          font-size: 1.5rem;
+        }
+      }
+
+      .rating-button {
+        background-color: $sky-color;
+        border: none;
+        color: white;
+        padding: 0.3rem 1rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+
+  }
+
+}

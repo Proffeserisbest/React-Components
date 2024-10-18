@@ -1,0 +1,64 @@
+@import './style/_mixins.scss';
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 100px;
+  margin-left: 100px;
+  padding: 10px;
+  background-color: $white-color;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  .search-input-wrapper, .location-input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 45%;
+
+    .icon {
+      position: absolute;
+      left: 10px;
+      font-size: 1rem;
+      color: $placeholder-color;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-size: 0.9rem;
+      color: $placeholder-color;
+      padding: 10px 10px 10px 30px; // Adjust padding to make space for the icon
+      width: 100%;
+
+      ::placeholder {
+        color: $placeholder-color;
+      }
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 40px; // Adjust height as needed
+    background-color: $border-light-color; // Adjust color as needed
+    margin: 0 10px;
+  }
+
+  .search-button {
+    background-color: $primary-color;
+    color: $white-color;
+    border: none;
+    padding: 12px 36px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+}

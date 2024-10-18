@@ -1,0 +1,77 @@
+.newcd-card {
+    display: flex;
+    align-items: center;
+    width: 345px;
+    height: 215px;
+    border: 1px solid #00f;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 12px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  
+    .logo {
+      width: 80px;
+      height: auto;
+      margin-right: 20px;
+    }
+  
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      .company-name {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+      }
+  
+      .feedback {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+  
+        .likes {
+          color: green;
+          display: flex;
+          align-items: center;
+        }
+  
+        .dislikes {
+          color: red;
+          display: flex;
+          align-items: center;
+        }
+      }
+  
+      .ratings {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+  
+        .stars {
+          font-size: 1rem;
+          color: #ff9800;
+        }
+  
+        .overall {
+          font-size: 0.9rem;
+  
+          .rating-value {
+            background-color: #00BCD4;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+          }
+        }
+      }
+  
+      .location {
+        font-size: 0.8rem;
+        color: #555;
+      }
+    }
+  }
