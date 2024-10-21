@@ -1,12 +1,12 @@
 import React from 'react';
+import FAQAccordion from './FAQAccordion';
 
-
-function AdCard() {
+const App = () => {
   return (
     <div>
-      <AdCard />
+      <FAQAccordion />
     </div>
   );
-}
+};
 
-export default AdCard;
+export default App;

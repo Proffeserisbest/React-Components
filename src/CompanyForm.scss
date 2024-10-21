@@ -1,0 +1,81 @@
+.company-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+
+  h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .upload-logo {
+    text-align: center;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    .upload-icon {
+      font-size: 2em;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &.two-column {
+      .input-field {
+        flex-basis: 48%;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+
+      span {
+        font-weight: normal;
+        color: #aaa;
+      }
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

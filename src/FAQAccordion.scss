@@ -1,0 +1,55 @@
+@import './style/_mixins.scss';
+
+.faq-accordion {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: $white-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+    @include fontStyle(24px, $primary-color, 600, 28.8px);
+    text-align: left;
+  }
+
+  .faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid $border-light-color;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    @include fontStyle(18px, $sky-color, 700, 21.6px);
+    padding: 10px 0;
+    color: $black-light;
+
+    &.active {
+      color: $primary-color;
+    }
+  }
+
+  .faq-answer {
+    padding: 10px 0;
+    @include fontStyle(16px, $black-light, 400, 19.2px);
+  }
+
+  .faq-icon {
+    font-size: 24px;
+    color: $sky-color;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $sky-color;
+    border-radius: 50%;
+  }
+}
