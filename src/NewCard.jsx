@@ -6,7 +6,7 @@ import './NewCard.scss';
 function NewCard() {
   return (
     <div className="new-card">
-      <img src="https://via.placeholder.com/150" alt="Logo" className="company-logo" />
+      <img src="#" alt="Logo" className="company-logo" />
       <p></p>
       <h3>Andropple Lab</h3>
       <p></p>

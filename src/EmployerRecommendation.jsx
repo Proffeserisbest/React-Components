@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './EmployerRecommendation.css';
+import './EmployerRecommendation.scss';
 
 function EmployerRecommendation() {
   const [recommendation, setRecommendation] = useState(null);
