@@ -1,0 +1,46 @@
+.join-with-social-media {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-weight: normal; // Reset the font-weight for the container
+
+  .text-content {
+    font-weight: bold !important; // Ensure bold is applied to the specific text content
+  }
+}
+
+h2 {
+  font-size: 30px !important ;// Increase the font size
+  font-weight: bold !important; // Ensure bold is applied to the h2 element
+  margin: 0 0 10px 0;
+}
+
+.underline {
+  width: 50px;
+  height: 3px;
+  background-color: #008080;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+  margin-top: 15px;
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.link {
+  color: #008080;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

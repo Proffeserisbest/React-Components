@@ -1,0 +1,66 @@
+.companyTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  thead {
+    background-color: #e0f7fa;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+
+.companyInfo {
+  display: flex;
+  align-items: center;
+}
+
+.companyLogo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  color: orange;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.ratingScore {
+  background-color: teal;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.goodReviews,
+.badReviews {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-right: 5px;
+  }
+}
+
+.viewButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}

@@ -1,0 +1,15 @@
+.table-header {
+    display: flex;
+    align-items: center;
+    background-color: #e0f7fa; // Light blue background
+    padding: 10px 20px;
+    border-radius: 4px;
+    width: 70%;
+  
+    .header-item {
+        flex: 1; // Allows each item to take equal width
+        font-weight: bold;
+        text-align: center; // Center align text
+        color: #333; // Dark gray text color
+    }
+}
